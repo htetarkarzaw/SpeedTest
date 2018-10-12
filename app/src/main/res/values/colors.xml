@@ -3,4 +3,35 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="whitefull">#FFFFFF</color>
+    <color name="redfull">#FF0000</color>
+    <color name="income">#008000</color>
+    <color name="net">#FFFF00</color>
+    <color name="budget">#9932CC</color>
+    <color name="net_saving">#9932CC</color>
+    <color name="goal">#FF1493</color>
+    <color name="debt">#BDBDBD</color>
+    <color name="empty_bar">#DBE1EB</color>
+    <color name="selected_bar">#30353D</color>
+    <color name="white_full">#FFFFFF</color>
+    <color name="black_full">#000000</color>
+
+    <color name="red">#EA4335</color>
+    <color name="lime_green">#32CD32</color>
+    <color name="indian_red">#FF6A6A</color>
+    <color name="dark_violet">#9400D3</color>
+    <color name="golden_rod">#FFC125</color>
+    <color name="medium_orchid">#BA55D3</color>
+    <color name="deep_sky_blue">#00BFFF</color>
+    <color name="blue2">#0000EE</color>
+
+    <color name="orange_red">#FF4500</color>
+
+    <color name="google_blue">#4285F4</color>
 </resources>
