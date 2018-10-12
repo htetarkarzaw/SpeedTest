@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupController()
-        Log.e("SpeedLIst",speedList.size.toString()+"**************")
 
     }
 
@@ -53,14 +52,12 @@ class MainActivity : AppCompatActivity() {
         changeDate.setOnClickListener {
             showMonthYearDialog()
         }
-        getDemoDay()
-//        getSpeedByDay(day,month,year)
+//        getDemoDay()
+        getSpeedByDay(day,month,year)
 
     }
 
     private fun setupChart(list:List<SpeedVO>) {
-
-
         val entries = ArrayList<Entry>()
         val entrie2 = ArrayList<Entry>()
         var down = 0.0
@@ -135,7 +132,8 @@ class MainActivity : AppCompatActivity() {
         var speed: LiveData<List<SpeedVO>>? = SpeedTestModel.getInstance().getSpeedByDay(day,month,year)
         speed!!.observe(this,android.arch.lifecycle.Observer {
             if(it!=null){
-                setupChart(it)
+                if(it.isNotEmpty())setupChart(it)
+                Log.e("Speed",it.size.toString())
             }
         })
     }
@@ -151,7 +149,7 @@ class MainActivity : AppCompatActivity() {
 
         val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
             chooseDay.text = "$dayOfMonth ${months[monthOfYear]} $year"
-//            getSpeedByDay(dayOfMonth,monthOfYear,year)
+            getSpeedByDay(dayOfMonth,monthOfYear,year)
         }, yearSelected, monthSelected, daySelected)
         datePicker.show()
     }
